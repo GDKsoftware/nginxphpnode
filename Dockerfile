@@ -1,10 +1,9 @@
 FROM php:5.6
 
 RUN \
-  apt-get update && \
-  apt-get install -y python-software-properties software-properties-common wget zip unzip zlib1g-dev curl && \
   add-apt-repository -y ppa:nginx/stable && \
   apt-get update && \
+  apt-get install -y python-software-properties software-properties-common wget zip unzip zlib1g-dev curl && \
   docker-php-ext-install mysql && \
   docker-php-ext-install mysqli && \
   docker-php-ext-install pdo_mysql && \
